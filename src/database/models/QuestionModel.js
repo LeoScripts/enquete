@@ -8,18 +8,14 @@ class Question extends Model {
                 primaryKey:true,
                 allowNull:false
             },
-            name:{
+            question:{
                 type:DataTypes.STRING,
                 allowNull:false
             },
-            start:{
+            answer:{
                 type:DataTypes.STRING,
                 allowNull:false
-            },
-            end:{
-                type:DataTypes.STRING,
-                allowNull:false
-            },
+            }
         },{
             sequelize,
             tableName:'questions'

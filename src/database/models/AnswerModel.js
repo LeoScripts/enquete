@@ -12,14 +12,6 @@ class Answer extends Model {
                 type:DataTypes.STRING,
                 allowNull:false
             },
-            start:{
-                type:DataTypes.STRING,
-                allowNull:false
-            },
-            end:{
-                type:DataTypes.STRING,
-                allowNull:false
-            },
         },{
             sequelize,
             tableName:'answers'
