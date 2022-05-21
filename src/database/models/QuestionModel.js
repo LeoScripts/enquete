@@ -1,27 +1,46 @@
-const { Model,DataTypes } = require('sequelize');
+const sequelize = require('sequelize')
+const Answer = require('./AnswerModel')
+const QuestionAnswer = require('./QuestionAnswerModel')
 
-class Question extends Model {
-    static init(sequelize){
-        super.init({
-            id:{
-                type:DataTypes.STRING,
-                primaryKey:true,
-                allowNull:false
-            },
-            question:{
-                type:DataTypes.STRING,
-                allowNull:false
-            },
-            answer:{
-                type:DataTypes.STRING,
-                allowNull:false
-            }
-        },{
-            sequelize,
-            tableName:'questions'
-
-        });
+module.exports = (sequelize, DataTypes) => {
+  const Question = sequelize.define('Question', {
+    id: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+      allowNull: false
+    },
+    question: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    start: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    end: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
-}
+  }, {
+    sequelize,
+    tableName: 'question'
+  });
 
-module.exports = Question;
+  Question.belongsToMany(Answer, {
+    through: {
+      model: QuestionAnswer
+    },
+    foreignKey:'idQuestion',
+    constraint: true
+  })
+
+  Answer.belongsToMany(Question, {
+    through: {
+      model: QuestionAnswer
+    },
+    foreignKey:'idAnswer',
+    constraint: true
+  })
+
+  return Question
+}
