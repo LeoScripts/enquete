@@ -1,12 +1,16 @@
-module.exports = {
+require('dotenv').config();
+
+const config = {
   username: 'root',
-  password: '123456',
+  password: process.env.DB_PASS,
   database: 'enquete',
   host: '127.0.0.1',
   dialect: 'mysql',
-  port: 3306,
-  define:{
-    timestamps:false,
-    underscored:true
-  }
+  port: process.env.DB_PORT,
+  define: {
+    timestamps: false,
+    underscored: true,
+  },
 };
+
+module.exports = config;

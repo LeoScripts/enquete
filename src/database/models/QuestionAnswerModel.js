@@ -3,12 +3,12 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.STRING,
       primaryKey: true,
-      allowNull: false
-    }
-    
+      allowNull: false,
+    },
+
   }, {
     sequelize,
-    tableName: 'questionAnswer'
+    tableName: 'questionAnswer',
   });
-  return QuestionAnswer
-}
+  return QuestionAnswer;
+};

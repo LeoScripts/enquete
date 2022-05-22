@@ -3,15 +3,15 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.STRING,
       primaryKey: true,
-      allowNull: false
+      allowNull: false,
     },
     answer: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
   }, {
     sequelize,
-    tableName: 'answer'
+    tableName: 'answer',
   });
-  return Answer
-}
+  return Answer;
+};
