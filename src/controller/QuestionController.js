@@ -15,7 +15,12 @@ const questionController = {
     );
   },
   async read2(req, res) {
-    res.send('teste');
+    const questions = await prisma.question.findMany({
+      include: {
+        AnswerQuestion: true,
+      },
+    });
+    res.send(questions);
   },
 };
 

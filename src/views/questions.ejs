@@ -12,9 +12,20 @@
 
   <h1>Enquete</h1>
   <% questions.map(q => { %>
-    <h2 style="background-color: #ddff99;">
-      <%= q.question%>
-    </h2>
+    <div class="question" style="background-color: #FFF; box-shadow: 0 0 5px #ddff99; margin: 1rem; padding:  1rem;">
+      <h2 style="background-color: #ddff99; padding: 1rem; border-radius: 0.5rem;">
+        <%= q.question%>
+      </h2>
+      <div >
+        <strong style="background-color: #3fa; padding: 1rem;"><%= q.start %></strong>
+        <strong style="background-color: #f3f; padding: 1rem;"><%= q.end %></strong>
+      </div>
+
+      <div>
+        <button>VOTAR</button>
+        <p><%= q.answerId %></p>
+      </div>
+    </div>
   <% }); %>
 
 
