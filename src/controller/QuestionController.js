@@ -1,20 +1,12 @@
-// const { PrismaClient } = require('@prisma/client');
-
-const { prismaClient } = require('../database/client');
+const prisma = require('../database/client');
 
 const questionController = {
   async read(req, res) {
-    const questions = [
-      {
-        question: 'qual e o seu nome?',
+    const questions = await prisma.question.findMany({
+      include: {
+        AnswerQuestion: true,
       },
-      {
-        question: 'qual e o seu email?',
-      },
-      {
-        question: 'qual e o seu apelido?',
-      },
-    ];
+    });
     return res.render(
       'questions',
       {
@@ -23,14 +15,7 @@ const questionController = {
     );
   },
   async read2(req, res) {
-    const questions = await prismaClient.question.findMany();
-
-    return res.render(
-      'questions',
-      {
-        questions,
-      },
-    );
+    res.send('teste');
   },
 };
 
