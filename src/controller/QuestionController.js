@@ -22,6 +22,22 @@ const questionController = {
     });
     res.send(questions);
   },
+  create(req, res) {
+    res.render('createQuestion');
+  },
+  async save(req, res) {
+    const { question, start, end } = req.body;
+    console.log(start, end, question);
+    const createQuestion = await prisma.question.create({
+      data: {
+        question,
+        start,
+        end,
+      },
+    });
+    console.log(createQuestion);
+    res.redirect('/enquetes');
+  },
 };
 
 module.exports = questionController;

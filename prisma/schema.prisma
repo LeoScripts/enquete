@@ -13,8 +13,8 @@ datasource db {
 model Question {
   id       String   @id @default(uuid())
   question String
-  start    DateTime
-  end      DateTime
+  start    String
+  end      String
 
   @@map("question")
   AnswerQuestion AnswerQuestion[]
