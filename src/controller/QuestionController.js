@@ -14,28 +14,44 @@ const questionController = {
       },
     );
   },
-  async read2(req, res) {
-    const questions = await prisma.question.findMany({
-      include: {
-        AnswerQuestion: true,
-      },
-    });
-    res.send(questions);
-  },
+
   create(req, res) {
     res.render('createQuestion');
   },
+
   async save(req, res) {
     const { question, start, end } = req.body;
-    console.log(start, end, question);
-    const createQuestion = await prisma.question.create({
+    await prisma.question.create({
       data: {
         question,
         start,
         end,
       },
     });
-    console.log(createQuestion);
+    res.redirect('/enquetes');
+  },
+
+  async questionPage(req, res) {
+    const { id } = req.params;
+    const question = await prisma.question.findFirst({
+      where: {
+        id,
+      },
+    });
+    res.render('enquete', { question });
+  },
+
+  async update(req, res) {
+    const id = req.parans;
+    const { question, start, end } = req.body;
+    await prisma.question.update({
+      where: { id },
+      data: {
+        question,
+        start,
+        end,
+      },
+    });
     res.redirect('/enquetes');
   },
 };
