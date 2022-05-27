@@ -59,19 +59,19 @@ Describe your project
 :heavy_check_mark: implamentation container docker;\
 :heavy_check_mark: implamentation patten style code with eslint;\
 :heavy_check_mark: implamentation architecture MVC ;\
-:heavy_check_mark: implamentation migrations ;\
+:heavy_check_mark: implamentation migrations ;
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
 - [Node.js](https://nodejs.org/en/)
-- [Prisma ORM](https)
-- [Docker](https)
+- [Prisma ORM](https://www.prisma.io/)
+- [Docker](https://docs.docker.com/get-docker/)
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com),[Docker](https), [Docker-compose](https)  and [Node](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com),[Docker](https://docs.docker.com/get-docker/), [Docker-compose](https://docs.docker.com/compose/install/)  and [Node](https://nodejs.org/en/) installed.
 
 ## :checkered_flag: Starting ##
 
