@@ -46,7 +46,7 @@ Status
 
 ## :dart: About ##
 
-Describe your project
+project made with the intention of testing the use of PrismaORM with pure javascript, the front is very raw but I will be improving it because my main focus was on the back-end.
 
 ## :sparkles: Features ##
 
