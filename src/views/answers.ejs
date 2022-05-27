@@ -1,0 +1,13 @@
+<body>
+  <h1>respostas</h1>
+  <a href="/answers/criar">Nova resposta</a>
+  <% data.map(item=> { %>
+    <div>
+      <h2>
+        <%= item.answer%>
+          <a href="/answers/edit/<%= item.id%>" style="text-decoration: none;">✏️</a>
+          <a href="/answers/delete/<%= item.id%>" style="text-decoration: none;">❌</a>
+      </h2>
+    </div>
+    <% }) %>
+</body>

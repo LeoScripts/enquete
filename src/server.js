@@ -2,7 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override');
-const routes = require('./routes/survey.routes');
+const questionRoutes = require('./routes/question.routes');
+const answerRoutes = require('./routes/answer.routes');
 
 const port = process.env.PORT;
 const hostname = process.env.HOSTNAME;
@@ -16,6 +17,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.resolve('src', 'views'));
 app.set(express.static(path.resolve('src', 'public')));
 
-app.use(routes);
+app.use(questionRoutes);
+app.use(answerRoutes);
 
 app.listen(3000, () => console.log(`Server runnig at http://${hostname}:${port}/questions`));
