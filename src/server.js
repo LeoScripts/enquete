@@ -18,4 +18,4 @@ app.set(express.static(path.resolve('src', 'public')));
 
 app.use(routes);
 
-app.listen(3000, () => console.log(`Server runnig at http://${hostname}:${port}`));
+app.listen(3000, () => console.log(`Server runnig at http://${hostname}:${port}/questions`));

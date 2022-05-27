@@ -3,7 +3,7 @@ const surveyController = require('../controller/QuestionController');
 
 const router = express.Router();
 
-router.get('/questions/criar', surveyController.create);
+router.get('/questions/criar', surveyController.createPage);
 router.get('/questions', surveyController.read);
 router.get('/questions/:id', surveyController.questionPage);
 router.get('/questions/edit/:id', surveyController.updatePage);

@@ -7,15 +7,10 @@ const questionController = {
         AnswerQuestion: true,
       },
     });
-    return res.render(
-      'questions',
-      {
-        questions,
-      },
-    );
+    return res.render('questions', { questions });
   },
 
-  create(req, res) {
+  createPage(req, res) {
     res.render('createQuestion');
   },
 
