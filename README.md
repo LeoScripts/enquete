@@ -1,4 +1,4 @@
-<div align="center" id="top"> 
+<div align="center" id="top">
   <!-- <img src="./.github/app.gif" alt="Enquete" /> -->
 
   &#xa0;
@@ -24,17 +24,17 @@
   <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/LeoScripts/enquete?color=56BEB8" /> -->
 </p>
 
-<!-- Status -->
+Status
 
-<!-- <h4 align="center"> 
+<h4 align="center">
 	🚧  Enquete 🚀 Under construction...  🚧
-</h4> 
+</h4>
 
-<hr> -->
+<hr>
 
 <p align="center">
-  <!-- <a href="#dart-about">About</a> &#xa0; | &#xa0;  -->
-  <!-- <a href="#sparkles-features">Features</a> &#xa0; | &#xa0; -->
+  <a href="#dart-about">About</a> &#xa0; | &#xa0;
+  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
@@ -44,25 +44,34 @@
 
 <br>
 
-<!-- ## :dart: About ##
+## :dart: About ##
 
 Describe your project
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3; -->
+:heavy_check_mark: Create question;\
+:heavy_check_mark: Read questions and one question;\
+:heavy_check_mark: update question;\
+:heavy_check_mark: delete question;\
+:heavy_check_mark: front simple from test in ejs;\
+:heavy_check_mark: implamentation prisma orm;\
+:heavy_check_mark: implamentation container docker;\
+:heavy_check_mark: implamentation patten style code with eslint;\
+:heavy_check_mark: implamentation architecture MVC ;\
+:heavy_check_mark: implamentation migrations ;\
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
 - [Node.js](https://nodejs.org/en/)
+- [Prisma ORM](https)
+- [Docker](https)
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com),[Docker](https), [Docker-compose](https)  and [Node](https://nodejs.org/en/) installed.
 
 ## :checkered_flag: Starting ##
 
@@ -73,16 +82,16 @@ $ git clone https://github.com/LeoScripts/enquete
 # Access
 $ cd enquete
 
-# run db in docker
-$ make up
-
 # Install dependencies
 $ npm i
+
+# run db in docker
+$ make up
 
 # Run the project
 $ npm start
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://localhost:3000/questions>
 ```
 
 ## :memo: License ##
