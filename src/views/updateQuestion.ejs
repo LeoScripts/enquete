@@ -8,11 +8,11 @@
 </head>
 <body>
   <h1>Nova Enquete</h1>
-  <form action="/enquetes" method="post">
-    <input type="text" name="question" placeholder="digite sua pergunta">
-    <input type="date" name="start" placeholder="inicio">
-    <input type="date" name="end" placeholder="fim">
-    <button type="submit">criar</button>
+  <form action="/enquetes/edit/<%= dataQuestion.id%>?_method=PUT" method="post">
+    <input type="text" name="question" value="<%= dataQuestion.question%>">
+    <input type="date" name="start" value="<%= dataQuestion.start %>">
+    <input type="date" name="end" value="<%= dataQuestion.end%>">
+    <button type="submit">salvar</button>
   </form>
 </body>
 </html>

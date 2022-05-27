@@ -40,9 +40,20 @@ const questionController = {
     });
     res.render('enquete', { question });
   },
+  async updatePage(req, res) {
+    const { id } = req.params;
+    const dataQuestion = await prisma.question.findFirst({
+      where: {
+        id,
+      },
+    });
+
+    res.render('updateQuestion', { dataQuestion });
+  },
 
   async update(req, res) {
-    const id = req.parans;
+    const { id } = req.params;
+
     const { question, start, end } = req.body;
     await prisma.question.update({
       where: { id },
@@ -52,7 +63,7 @@ const questionController = {
         end,
       },
     });
-    res.redirect('/enquetes');
+    res.redirect(`/enquetes/${id}`);
   },
 };
 

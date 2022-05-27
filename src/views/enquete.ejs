@@ -7,9 +7,16 @@
   <title>Document</title>
 </head>
 <body>
-  <h1><%= question.question%></h1>
+  <h1>
+    <%= question.question%>
+    <a href="/enquetes/edit/<%= question.id%>" style="text-decoration: none;">✏️</a>
+    <a href="/enquetes/delete/:id" style="text-decoration: none;">❌</a>
+  </h1>
   <div>
-    <div >
+
+  </div>
+  <div>
+    <div style="margin-top: 1rem;">
       <strong style="background-color: #3fa; padding: 1rem;">data inicio: <%= question.start %></strong>
       <strong style="background-color: #f3f; padding: 1rem;"> data termino: <%= question.end %></strong>
     </div>
