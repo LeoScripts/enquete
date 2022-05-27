@@ -11,7 +11,7 @@
 <body>
 
   <h1>Enquete</h1>
-  <a href="/enquetes/criar"><strong>criar nova enquete</strong></a>
+  <a href="/questions/criar"><strong>criar nova enquete</strong></a>
 
   <% questions.forEach((item, index) => { %>
 
@@ -22,7 +22,7 @@
 
 
       <button>VOTAR</button>
-      <a href="/enquetes/<%= item.id%>" >detalhes</a>
+      <a href="/questions/<%= item.id%>" >detalhes</a>
     </div>
 
     <% }); %>

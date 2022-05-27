@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>Nova Enquete</h1>
-  <form action="/enquetes/edit/<%= dataQuestion.id%>?_method=PUT" method="post">
+  <form action="/questions/edit/<%= dataQuestion.id%>?_method=PUT" method="post">
     <input type="text" name="question" value="<%= dataQuestion.question%>">
     <input type="date" name="start" value="<%= dataQuestion.start %>">
     <input type="date" name="end" value="<%= dataQuestion.end%>">

@@ -28,7 +28,7 @@ const questionController = {
         end,
       },
     });
-    res.redirect('/enquetes');
+    res.redirect('/questions');
   },
 
   async questionPage(req, res) {
@@ -38,7 +38,7 @@ const questionController = {
         id,
       },
     });
-    res.render('enquete', { question });
+    res.render('question', { question });
   },
   async updatePage(req, res) {
     const { id } = req.params;
@@ -47,13 +47,11 @@ const questionController = {
         id,
       },
     });
-
     res.render('updateQuestion', { dataQuestion });
   },
 
   async update(req, res) {
     const { id } = req.params;
-
     const { question, start, end } = req.body;
     await prisma.question.update({
       where: { id },
@@ -63,7 +61,17 @@ const questionController = {
         end,
       },
     });
-    res.redirect(`/enquetes/${id}`);
+    res.redirect(`/questions/${id}`);
+  },
+
+  async delete(req, res) {
+    const { id } = req.params;
+    await prisma.question.delete({
+      where: {
+        id,
+      },
+    });
+    res.redirect('/questions');
   },
 };
 
