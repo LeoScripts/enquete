@@ -2,12 +2,13 @@ const prisma = require('../database/client');
 
 const questionController = {
   async read(req, res) {
+    const answers = await prisma.answer.findMany();
     const questions = await prisma.question.findMany({
       include: {
         AnswerQuestion: true,
       },
     });
-    return res.render('questions', { questions });
+    return res.render('questions', { questions, answers });
   },
 
   createPage(req, res) {

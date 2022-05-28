@@ -4,6 +4,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 const questionRoutes = require('./routes/question.routes');
 const answerRoutes = require('./routes/answer.routes');
+const answerQuestionRoutes = require('./routes/answerQuestion.routes');
 
 const port = process.env.PORT;
 const hostname = process.env.HOSTNAME;
@@ -19,5 +20,6 @@ app.set(express.static(path.resolve('src', 'public')));
 
 app.use(questionRoutes);
 app.use(answerRoutes);
+app.use(answerQuestionRoutes);
 
 app.listen(3000, () => console.log(`Server runnig at http://${hostname}:${port}/questions`));

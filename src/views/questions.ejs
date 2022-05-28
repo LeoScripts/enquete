@@ -20,8 +20,16 @@
         <%= item.question %>
       </h2>
 
+      <form action="/answerQuestions" method="post">
+        <input type="text" name="questionId" value="<%= item.id%>" hidden >
+        <select name="answerId" id="">
+          <% answers.map(data => {  %>
+            <option value="<%= data.id%>"> <%= data.answer%> </option>
+          <% }) %>
+        </select>
+        <button>votar</button>
+      </form>
 
-      <button>VOTAR</button>
       <a href="/questions/<%= item.id%>" >detalhes</a>
     </div>
 

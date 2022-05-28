@@ -1,0 +1,6 @@
+<h1>votos</h1>
+<a href="/questions">votar</a>
+<% data.map( item => {  %>
+  <h2> <%= item.question.question%></h2>
+  <p> <%= item.answer.answer%></p>
+<% }) %>
